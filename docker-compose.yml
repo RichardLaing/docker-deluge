@@ -4,11 +4,11 @@ services:
   deluge:
     image: linuxserver/deluge:1
     build: .
-    hostname: deluge
+    container_name: deluge
     ports:
-      - 53160:53160
-      - 8112:8112
-      - 58846:58846
+      - "53160:53160"
+      - "8112:8112"
+      - "58846:58846"
     volumes:
       - ./downloads:/downloads
       - ./config:/config
