@@ -1,0 +1,19 @@
+version: '2'
+
+services:
+  deluge:
+    image: linuxserver/deluge:1
+    build: .
+    hostname: deluge
+    ports:
+      - 53160:53160
+      - 8112:8112
+      - 58846:58846
+    volumes:
+      - ./downloads:/downloads
+      - ./config:/config
+    restart: always
+    environment:
+      - TZ=Europe/London
+      - PUID=911
+      - GUID=911
