@@ -12,6 +12,7 @@ services:
     volumes:
       - ./downloads:/downloads
       - ./config:/config
+      - /etc/localtime:/etc/localtime:ro
     restart: always
     environment:
       - TZ=Europe/London
